@@ -19,6 +19,10 @@ public class SinavProgramiRapor {
     @Column(name = "BolumAd")
     private String bolumAd;
 
+    // --- İŞTE YENİ EKLENEN SÜTUN ---
+    @Column(name = "Yariyil")
+    private Integer yariyil;
+
     @Column(name = "Tarih")
     private String tarih;
 
@@ -37,6 +41,8 @@ public class SinavProgramiRapor {
     public void setDersAdi(String dersAdi) { this.dersAdi = dersAdi; }
     public String getBolumAd() { return bolumAd; }
     public void setBolumAd(String bolumAd) { this.bolumAd = bolumAd; }
+    public Integer getYariyil() { return yariyil; }
+    public void setYariyil(Integer yariyil) { this.yariyil = yariyil; }
     public String getTarih() { return tarih; }
     public void setTarih(String tarih) { this.tarih = tarih; }
     public String getSaat() { return saat; }
