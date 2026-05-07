@@ -20,4 +20,9 @@ public class RaporController {
         // SQL View'ini çalıştırıp JSON olarak Frontend'e gönderir
         return raporRepository.findAll();
     }
+    @GetMapping("/program")
+    public List<java.util.Map<String, Object>> getSinavProgrami() {
+        return raporRepository.getSinavProgrami();
+    }
+
 }

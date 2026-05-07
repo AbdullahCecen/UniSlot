@@ -27,6 +27,9 @@ public class PersonelDurum {
     @Column(name = "BitisSaat")
     private String bitisSaat = "23:59";
 
+    @Column(name = "Uygun")
+    private Integer uygun = 0;
+
     // --- Getter ve Setter Metodları ---
     public Integer getDurumID() { return durumID; }
     public void setDurumID(Integer durumID) { this.durumID = durumID; }
@@ -40,4 +43,6 @@ public class PersonelDurum {
     public void setBaslangicSaat(String baslangicSaat) { this.baslangicSaat = baslangicSaat; }
     public String getBitisSaat() { return bitisSaat; }
     public void setBitisSaat(String bitisSaat) { this.bitisSaat = bitisSaat; }
+    public Integer getUygun() { return uygun; }
+    public void setUygun(Integer uygun) { this.uygun = uygun; }
 }
