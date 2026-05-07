@@ -102,4 +102,8 @@ public interface SinavRepository extends JpaRepository<Sinav, Integer> {
             @Param("yeniOturumId") Integer yeniOturumId,
             @Param("degistiren") String degistiren
     );
+
+    @Modifying
+    @Query(value = "EXEC sp_TopluSalonAtamaGenel", nativeQuery = true)
+    void topluSalonAtamaGenel();
 }

@@ -102,4 +102,15 @@ public class SinavController {
 
         return ResponseEntity.ok("Sınav başarıyla güncellendi.");
     }
+
+    @PostMapping("/toplu-salon-ata")
+    public ResponseEntity<String> topluSalonAta() {
+        try {
+            sinavService.topluSalonAtamaGenel();
+            return ResponseEntity.ok("Tüm sınavlar için optimize edilmiş toplu salon ataması başarıyla tamamlandı.");
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().body("Toplu atama başarısız: " + e.getMessage());
+        }
+    }
+
 }

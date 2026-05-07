@@ -57,4 +57,9 @@ public class SinavService {
     public void sinavGuncelle(Integer sinavId, String yeniTarih, Integer yeniOturumId, String degistiren) {
         sinavRepository.sinavGuncelle(sinavId, yeniTarih, yeniOturumId, degistiren);
     }
+
+    @Transactional
+    public void topluSalonAtamaGenel() {
+        sinavRepository.topluSalonAtamaGenel();
+    }
 }
