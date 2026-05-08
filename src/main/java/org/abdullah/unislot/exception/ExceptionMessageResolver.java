@@ -81,6 +81,13 @@ public class ExceptionMessageResolver {
         if (mesaj.contains("trg_sinavguncellemelog")) {
             return "Sınav güncelleme log kaydı oluşturulurken hata oluştu.";
         }
+        if (mesaj.contains("2'den fazla sınav atanamaz")) {
+            return "Aynı yarıyıl (sınıf) için aynı güne 2'den fazla sınav atanamaz. Lütfen başka bir tarih seçin.";
+        }
+
+        if (mesaj.contains("arka arkaya en fazla 3 oturumda")) {
+            return "Gözetmen arka arkaya en fazla 3 oturumda görev alabilir! Atama işlemi reddedildi.";
+        }
 
         return "İşlem sırasında beklenmeyen bir hata oluştu.";
 
